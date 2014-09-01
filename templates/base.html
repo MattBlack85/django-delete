@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,6 +7,6 @@
   </head>
   <body>
     {% block content %}{% endblock content %}
-    <script src="{{ STATIC_URL }}jquery/js/jquery-1.9.1.js"></script>
+    <script src="{% static 'jquery-2.1.1.min.js' %}"></script>
   </body>
 </html>
