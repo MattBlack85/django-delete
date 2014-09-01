@@ -5,5 +5,18 @@ Index
 {% block content %}
 <div>
   <p>I'm in the index!</p>
+  <input id="pk"></input>
+  <button id="sub" type="button">Delete!</button>
 </div>
+<script>
+$(document).ready(function(){
+    $("#sub").on('click', function(){
+        var pk = $("#pk").val();
+        $.ajax({
+            url: "http://127.0.0.1:8000/delete/" + pk,
+            type: "DELETE"
+        });
+    });
+})
+</script>
 {% endblock content %}
